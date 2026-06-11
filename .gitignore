@@ -1,0 +1,6 @@
+competitor_data.db
+competitor_data.before-*.db
+*.html
+logs/
+__pycache__/
+*.pyc

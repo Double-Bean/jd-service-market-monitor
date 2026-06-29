@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1320" viewBox="0 0 1500 1320">
+  <defs>
+    <style>
+      .bg { fill: #f6f8fb; }
+      .title { font: 700 32px "Microsoft YaHei", "PingFang SC", Arial, sans-serif; fill: #172033; }
+      .subtitle { font: 16px "Microsoft YaHei", "PingFang SC", Arial, sans-serif; fill: #5e6a7d; }
+      .box { fill: #ffffff; stroke: #c9d3e2; stroke-width: 2; rx: 8; }
+      .box-main { fill: #eef6ff; stroke: #4f8fd8; stroke-width: 2; rx: 8; }
+      .box-store { fill: #f3f7ee; stroke: #75a95e; stroke-width: 2; rx: 8; }
+      .box-report { fill: #fff7e6; stroke: #d99a2b; stroke-width: 2; rx: 8; }
+      .box-warn { fill: #fff0f0; stroke: #d86b6b; stroke-width: 2; rx: 8; }
+      .diamond { fill: #ffffff; stroke: #7d8aa0; stroke-width: 2; }
+      .text { font: 17px "Microsoft YaHei", "PingFang SC", Arial, sans-serif; fill: #1f2937; }
+      .small { font: 14px "Microsoft YaHei", "PingFang SC", Arial, sans-serif; fill: #536174; }
+      .lane { fill: #ffffff; stroke: #e1e7f0; stroke-width: 1.5; rx: 10; }
+      .lane-title { font: 700 18px "Microsoft YaHei", "PingFang SC", Arial, sans-serif; fill: #2f3a4c; }
+      .arrow { stroke: #59677a; stroke-width: 2.2; fill: none; marker-end: url(#arrowhead); }
+      .arrow-dash { stroke: #8a95a6; stroke-width: 2; fill: none; stroke-dasharray: 6 6; marker-end: url(#arrowhead-gray); }
+      .badge { fill: #e8eef7; rx: 12; }
+      .badge-text { font: 13px "Microsoft YaHei", "PingFang SC", Arial, sans-serif; fill: #42526b; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 Z" fill="#59677a"/>
+    </marker>
+    <marker id="arrowhead-gray" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 Z" fill="#8a95a6"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1500" height="1320"/>
+  <text class="title" x="750" y="58" text-anchor="middle">竞品监控 Skill Workflow</text>
+  <text class="subtitle" x="750" y="88" text-anchor="middle">Python CLI + CDP 浏览器采集 + SQLite 历史库 + HTML 报告</text>
+
+  <rect class="lane" x="60" y="125" width="1380" height="170"/>
+  <text class="lane-title" x="90" y="160">1. 用户入口 / run.py 调度</text>
+  <rect class="box-main" x="610" y="182" width="280" height="64"/>
+  <text class="text" x="750" y="209" text-anchor="middle">用户输入需求</text>
+  <text class="small" x="750" y="232" text-anchor="middle">链接、批量采集、列表、报告、每日执行</text>
+
+  <polygon class="diamond" points="750,310 870,385 750,460 630,385"/>
+  <text class="text" x="750" y="381" text-anchor="middle">任务类型？</text>
+  <text class="small" x="750" y="405" text-anchor="middle">run.py 分发命令</text>
+
+  <rect class="box" x="130" y="350" width="190" height="58"/>
+  <text class="text" x="225" y="374" text-anchor="middle">采集单个</text>
+  <text class="small" x="225" y="397" text-anchor="middle">monitor(url)</text>
+  <rect class="box" x="360" y="350" width="190" height="58"/>
+  <text class="text" x="455" y="374" text-anchor="middle">批量采集</text>
+  <text class="small" x="455" y="397" text-anchor="middle">monitor_batch()</text>
+  <rect class="box" x="950" y="350" width="190" height="58"/>
+  <text class="text" x="1045" y="374" text-anchor="middle">查看列表</text>
+  <text class="small" x="1045" y="397" text-anchor="middle">list_all()</text>
+  <rect class="box" x="1180" y="350" width="190" height="58"/>
+  <text class="text" x="1275" y="374" text-anchor="middle">生成报告</text>
+  <text class="small" x="1275" y="397" text-anchor="middle">generate_report()</text>
+
+  <rect class="box-report" x="610" y="505" width="280" height="64"/>
+  <text class="text" x="750" y="532" text-anchor="middle">每日执行</text>
+  <text class="small" x="750" y="555" text-anchor="middle">run_daily(): 批量采集 + 生成日报</text>
+
+  <rect class="lane" x="60" y="610" width="1380" height="300"/>
+  <text class="lane-title" x="90" y="645">2. 采集链路 / CompetitorAgent.monitor()</text>
+  <rect class="box-main" x="140" y="690" width="230" height="64"/>
+  <text class="text" x="255" y="717" text-anchor="middle">识别平台</text>
+  <text class="small" x="255" y="740" text-anchor="middle">fw.jd.com / FW_GOODS</text>
+  <rect class="box-main" x="425" y="690" width="230" height="64"/>
+  <text class="text" x="540" y="717" text-anchor="middle">连接 CDP</text>
+  <text class="small" x="540" y="740" text-anchor="middle">127.0.0.1:9222 / 8088</text>
+  <rect class="box-main" x="710" y="690" width="230" height="64"/>
+  <text class="text" x="825" y="717" text-anchor="middle">访问页面</text>
+  <text class="small" x="825" y="740" text-anchor="middle">真实浏览器标签页</text>
+  <rect class="box-main" x="995" y="690" width="230" height="64"/>
+  <text class="text" x="1110" y="717" text-anchor="middle">等待前端渲染</text>
+  <text class="small" x="1110" y="740" text-anchor="middle">避免空壳页面</text>
+  <rect class="box-main" x="425" y="805" width="230" height="64"/>
+  <text class="text" x="540" y="832" text-anchor="middle">执行 JavaScript</text>
+  <text class="small" x="540" y="855" text-anchor="middle">Runtime.evaluate</text>
+  <rect class="box-main" x="710" y="805" width="230" height="64"/>
+  <text class="text" x="825" y="832" text-anchor="middle">读取 DOM</text>
+  <text class="small" x="825" y="855" text-anchor="middle">商品名、价格、评分等</text>
+  <rect class="box-main" x="995" y="805" width="230" height="64"/>
+  <text class="text" x="1110" y="832" text-anchor="middle">点击版本和周期</text>
+  <text class="small" x="1110" y="855" text-anchor="middle">Input.dispatchMouseEvent</text>
+
+  <rect class="lane" x="60" y="950" width="1380" height="190"/>
+  <text class="lane-title" x="90" y="985">3. 数据提取与质量检查</text>
+  <rect class="box" x="110" y="1025" width="180" height="68"/>
+  <text class="text" x="200" y="1050" text-anchor="middle">商品信息</text>
+  <text class="small" x="200" y="1073" text-anchor="middle">名称 / 服务商 / 活动</text>
+  <rect class="box" x="335" y="1025" width="180" height="68"/>
+  <text class="text" x="425" y="1050" text-anchor="middle">核心指标</text>
+  <text class="small" x="425" y="1073" text-anchor="middle">评分 / 评论 / 已买</text>
+  <rect class="box" x="560" y="1025" width="180" height="68"/>
+  <text class="text" x="650" y="1050" text-anchor="middle">价格矩阵</text>
+  <text class="small" x="650" y="1073" text-anchor="middle">版本 x 周期</text>
+  <polygon class="diamond" points="915,1005 1045,1060 915,1115 785,1060"/>
+  <text class="text" x="915" y="1056" text-anchor="middle">数据有效？</text>
+  <text class="small" x="915" y="1078" text-anchor="middle">非空壳 / 有价格</text>
+  <rect class="box-warn" x="1125" y="1025" width="210" height="68"/>
+  <text class="text" x="1230" y="1050" text-anchor="middle">异常重试</text>
+  <text class="small" x="1230" y="1073" text-anchor="middle">等待 8s，最多 3 次</text>
+
+  <rect class="lane" x="60" y="1180" width="1380" height="100"/>
+  <text class="lane-title" x="90" y="1215">4. 入库、对比与输出</text>
+  <rect class="box-store" x="155" y="1238" width="220" height="54"/>
+  <text class="text" x="265" y="1272" text-anchor="middle">写入 SQLite 历史库</text>
+  <rect class="box-store" x="470" y="1238" width="220" height="54"/>
+  <text class="text" x="580" y="1272" text-anchor="middle">读取历史记录对比</text>
+  <rect class="box-report" x="785" y="1238" width="220" height="54"/>
+  <text class="text" x="895" y="1272" text-anchor="middle">生成单品 HTML 报告</text>
+  <rect class="box-report" x="1100" y="1238" width="250" height="54"/>
+  <text class="text" x="1225" y="1272" text-anchor="middle">生成每日变化监控报告</text>
+
+  <path class="arrow" d="M750 246 L750 300"/>
+  <path class="arrow" d="M630 385 L550 385"/>
+  <path class="arrow" d="M630 385 L320 385"/>
+  <path class="arrow" d="M870 385 L950 385"/>
+  <path class="arrow" d="M870 385 L1180 385"/>
+  <path class="arrow" d="M750 460 L750 505"/>
+  <path class="arrow" d="M225 408 C225 520 255 580 255 690"/>
+  <path class="arrow" d="M455 408 C455 520 255 580 255 690"/>
+  <path class="arrow" d="M750 569 C750 590 255 590 255 690"/>
+  <path class="arrow" d="M370 722 L425 722"/>
+  <path class="arrow" d="M655 722 L710 722"/>
+  <path class="arrow" d="M940 722 L995 722"/>
+  <path class="arrow" d="M1110 754 C1110 785 1110 790 1110 805"/>
+  <path class="arrow" d="M995 837 L940 837"/>
+  <path class="arrow" d="M710 837 L655 837"/>
+  <path class="arrow" d="M540 869 C540 925 650 965 650 1025"/>
+  <path class="arrow" d="M825 869 C825 945 650 965 650 1025"/>
+  <path class="arrow" d="M1110 869 C1110 935 915 950 915 1005"/>
+  <path class="arrow" d="M740 1060 L785 1060"/>
+  <path class="arrow" d="M1045 1060 L1125 1060"/>
+  <path class="arrow-dash" d="M1230 1025 C1230 930 1110 920 1110 754"/>
+  <path class="arrow" d="M915 1115 C915 1160 265 1160 265 1238"/>
+  <path class="arrow" d="M375 1265 L470 1265"/>
+  <path class="arrow" d="M690 1265 L785 1265"/>
+  <path class="arrow" d="M1005 1265 L1100 1265"/>
+
+  <rect class="badge" x="1080" y="1110" width="300" height="26"/>
+  <text class="badge-text" x="1230" y="1128" text-anchor="middle">异常：标题为京麦服务市场、价格矩阵为空、无可用价格</text>
+</svg>
